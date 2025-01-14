@@ -54,7 +54,9 @@
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jenkins.core.version>2.332.4</jenkins.core.version>
+        <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
+        <jenkins.baseline>2.332</jenkins.baseline>
+        <jenkins.core.version>${jenkins.baseline}.4</jenkins.core.version>
     </properties>
 
     <scm>
@@ -68,7 +70,7 @@
         <dependencies>
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
-                <artifactId>bom-2.332.x</artifactId>
+                <artifactId>bom-${jenkins.baseline}.x</artifactId>
                 <version>1763.v092b_8980a_f5e</version>
                 <scope>import</scope>
                 <type>pom</type>
